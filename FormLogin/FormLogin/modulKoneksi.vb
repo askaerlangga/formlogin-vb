@@ -9,7 +9,7 @@ Module modulKoneksi
 
     Sub bukaKoneksi()
         'Letak Database
-        DB = "Driver={MySQL ODBC 8.0 ANSI Driver};Database=mysql_crud;server=localhost;uid=root"
+        DB = "Driver={MySQL ODBC 8.0 ANSI Driver};Database=formLoginMysql;server=localhost;uid=root"
         CONN = New OdbcConnection(DB)
         If CONN.State = ConnectionState.Closed Then
             CONN.Open()
