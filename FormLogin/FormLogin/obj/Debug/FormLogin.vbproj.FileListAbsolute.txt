@@ -142,3 +142,4 @@ C:\Users\Aska Erlangga\Documents\Mega Sync\Projects\Visual Basic\formlogin-vb\Fo
 C:\Users\Aska Erlangga\Documents\Mega Sync\Projects\Visual Basic\formlogin-vb\FormLogin\FormLogin\obj\Debug\FormLogin.exe
 C:\Users\Aska Erlangga\Documents\Mega Sync\Projects\Visual Basic\formlogin-vb\FormLogin\FormLogin\obj\Debug\FormLogin.xml
 C:\Users\Aska Erlangga\Documents\Mega Sync\Projects\Visual Basic\formlogin-vb\FormLogin\FormLogin\obj\Debug\FormLogin.pdb
+C:\Users\Aska Erlangga\Documents\Mega Sync\Projects\Visual Basic\formlogin-vb\FormLogin\FormLogin\obj\Debug\FormLogin.formDashboard.resources

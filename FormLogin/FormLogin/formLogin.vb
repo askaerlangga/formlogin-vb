@@ -44,6 +44,7 @@ Public Class formLogin
             End If
             MessageBox.Show("Login berhasil! Halo " + DR("username_user").ToString)
             Me.Hide()
+            formDashboard.Show()
         Else
             MessageBox.Show("Login Gagal, Username atau Password anda Salah!")
         End If
