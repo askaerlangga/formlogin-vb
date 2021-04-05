@@ -1,4 +1,5 @@
-﻿Public Class formLogin
+﻿Imports System.Data.Odbc
+Public Class formLogin
     Private Sub txtUsername_Enter(sender As Object, e As EventArgs) Handles txtUsername.Enter
         If txtUsername.Text = "Username" Then
             txtUsername.Text = ""
@@ -30,7 +31,23 @@
     End Sub
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
-        'Isi perintah login
+        bukaKoneksi()
+        Dim STR As String
+        STR = "SELECT * FROM tbl_user where username_user = '" & txtUsername.Text & "' and password_user = '" & txtPassword.Text & "'"
+        CMD = New OdbcCommand(STR, CONN)
+        DR = CMD.ExecuteReader
+        If DR.HasRows Then
+            If DR("level_user").ToString = "admin" Then
+                'Perintah untuk akun level admin
+            Else
+                'Perintah untuk akun level user
+            End If
+            MessageBox.Show("Login berhasil! Halo " + DR("username_user").ToString)
+            Me.Hide()
+        Else
+            MessageBox.Show("Login Gagal, Username atau Password anda Salah!")
+        End If
+        tutupKoneksi()
     End Sub
 
     Private Sub lblLupaPassword_Click(sender As Object, e As EventArgs) Handles lblLupaPassword.Click
